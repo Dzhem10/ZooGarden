@@ -6,6 +6,7 @@ namespace ZooGarden
 {
     class Program
     {
+        // Input Output Encoding
         static string filePath = "animals.txt";
         static List<Animal> animals = new List<Animal>();
 
