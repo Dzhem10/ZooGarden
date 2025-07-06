@@ -1,0 +1,26 @@
+﻿[
+  {
+    "AnimalID": 1,
+    "Species": "Lion",
+    "Name": "Leo",
+    "Age": 5,
+    "Habitat": "Savannah",
+    "Availability": true
+  },
+  {
+    "AnimalID": 2,
+    "Species": "Tiger",
+    "Name": "Tigra",
+    "Age": 4,
+    "Habitat": "Jungle",
+    "Availability": true
+  },
+  {
+    "AnimalID": 3,
+    "Species": "Giraffe",
+    "Name": "Gina",
+    "Age": 7,
+    "Habitat": "Savannah",
+    "Availability": false
+  }
+]
