@@ -10,6 +10,11 @@ namespace ZooGarden
 
         static void Main(string[] args)
         {
+
+            // Настройка на конзолата за правилна работа с Unicode символи (български букви и др.)
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+
             DisplayMenu();
 
             string choice = string.Empty;
