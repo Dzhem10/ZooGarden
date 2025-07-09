@@ -23,6 +23,7 @@ namespace ZooGarden // Пространство от имена за тази ч
             string choice;
             while ((choice = Console.ReadLine()!.ToLower()) != "x") // Четем избор, докато потребителят не въведе 'x'
             {
+
                 switch (choice)
                 {
                     case "1": // Добавяне на ново животно
