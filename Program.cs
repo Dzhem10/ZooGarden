@@ -224,6 +224,7 @@ namespace ZooGarden // Пространство от имена за тази ч
             Console.Write("Твоят избор: ");
         }
 
+
         // Показва съобщение за грешка в червено
         private static void ShowError(string message)
         {

@@ -11,14 +11,16 @@ namespace ZooGarden // Пространство от имена, използв�
     /// </summary>
     public class Animal
     {
-        // Частни полета – използвани за съхранение на данните вътрешно в класа.
-        private string species;
-        private string name;
-        private int age;
-        private string habitat;
 
-        // Конструкторът приема стойности за всички ключови свойства на животното
-        // и автоматично създава уникално AnimalID.
+        // Свойства за всяко животно
+        public string AnimalID { get; set; }
+        public string Species { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Habitat { get; set; }
+        public bool Availability { get; set; } = true;
+
+        // Конструктор за създаване на животно
         public Animal(string species, string name, int age, string habitat)
         {
             AnimalID = Guid.NewGuid().ToString(); // Създаване на уникален идентификатор
@@ -26,6 +28,8 @@ namespace ZooGarden // Пространство от имена, използв�
             Name = name;
             Age = age;
             Habitat = habitat;
+            Availability = true;
+           
         }
 
         // Уникално ID на животното, което не може да се променя 
@@ -60,32 +64,10 @@ namespace ZooGarden // Пространство от имена, използв�
             }
         }
 
-        // Свойство за възраст (age)
-        public int Age
+        // Метод за преобразуване на животното към формат за запис във файл
+        public string ToFileFormat()
         {
-            get { return age; }
-            set
-            {
-                if (value < 0 || value > 200) // Ограничения за допустима възраст
-                {
-                    throw new InvalidDataException("Невалидна възраст за животно.");
-                }
-                age = value;
-            }
-        }
-
-        // Свойство за местообитание (habitat)
-        public string Habitat
-        {
-            get { return habitat; }
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new InvalidDataException("Невалидно местообитание.");
-                }
-                habitat = value.Trim();
-            }
+            return $"{AnimalID};{Species};{Name};{Age};{Habitat};{Availability}";
         }
 
         // Наличност на животното – по подразбиране е true (налично).
